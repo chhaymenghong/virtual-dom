@@ -99,7 +99,7 @@ function diffChildren(a, b, patch, apply, index) {
             if (rightNode) {
                 // Excess nodes in b need to be added
                 apply = appendPatch(apply,
-                    new VPatch(VPatch.INSERT, null, rightNode))
+                    new VPatch(VPatch.INSERT, a, rightNode))
             }
         } else {
             walk(leftNode, rightNode, patch, index)
